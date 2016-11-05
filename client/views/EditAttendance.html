@@ -1,12 +1,11 @@
 <div class="container" id="box-centerside">
-    <div class="col-md-8" ng-controller="TimepickerCtrl">
+    <div class="col-md-8" ng-controller="editCtrl">
         <br>
         <div style="Padding:20px;">
             <form name='form' class='form-horizontal' role='form'>
                 <div class='form-group' style="Padding:20px;">
                     <div class="row">
                         Date:
-                        <!-- <span class="add-on" > -->
                         <input id="inputDate" type="text" uib-datepicker-popup="{{dateformat}}" ng-model="dt" is-open="showdp"> </input>
                         <button id="calenderBtn" type="button" class="btn btn-default" ng-click="showcalendar($event)">
                             <i class="glyphicon glyphicon-calendar"></i>
@@ -63,7 +62,7 @@ if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=tru
                         </div>
                     </div>
                     <br>
-                    <div class="closeBtn" >
+                    <div class="closeBtn">
                         <button type="button" class="btn btn-primary" ng-click="close()">Close</button>
                         <button type="button" class="btn btn-primary" ng-click="submitdata()">submit</button>
                     </div>
