@@ -13,8 +13,8 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.use(express.static(path.join(__dirname, '../client')));
-app.use(require('./contorller/index.js'));
+app.use(express.static(path.join(__dirname, './client')));
+app.use(require('./server/contorller/index.js'));
 
 /*
  |--------------------------------------------------------------------------

@@ -3,17 +3,27 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "cacheDirectories": [
+    "node_modules",
+    "bower_components"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "postinstall": "./node_modules/bower/bin/bower --allow-root install"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.2",
+    "bower": "^1.8.0",
     "cors": "^2.8.1",
     "express": "^4.14.0",
     "firebase": "^3.5.2",
     "toastr": "^2.1.2"
+  },
+  "config": {
+    "unsafe-perm": true
   }
 }
