@@ -38,7 +38,7 @@ router.post('/', function (req, res) {
                 var userData = {
                     user: user,
                     id: Id
-                }
+                };
                 res.send(userData);
 
             }
