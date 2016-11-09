@@ -16,7 +16,7 @@ HrApp.controller('loginCtrl', function ($scope, $location, $http, toastr) {
     var authData = { 'email': email };
 
     //sending user mail to server
-    $http.post('http://localhost:3000/login', authData).success(function (data) {
+    $http.post('https://hrattendance.herokuapp.com/login', authData).success(function (data) {
       if (data == "invalid email") {
         toastr.error("Invalid email");
       } else {

@@ -22,7 +22,7 @@ console.log(currentDate);
      *
      */
     $rootScope.retriveMonthAttendance = function(user) {
-        $http.post('http://localhost:3000/retriveMonthAttendance', user).success(function(data) {
+        $http.post('https://hrattendance.herokuapp.com/retriveMonthAttendance', user).success(function(data) {
 
             $rootScope.attendance.length = 0;
             var keys = Object.keys(data.attendance);

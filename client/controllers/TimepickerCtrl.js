@@ -133,15 +133,15 @@ HrApp.controller('TimepickerCtrl', function($scope, $log, $rootScope, $http, $lo
             'WorkingDay': data.selectedDay,
             'no_of_hours': WorkingHours,
             'reasonForAbsence': data.reasonForAbsence,
-        }
+        };
         console.log(jsonData);
-        $http.post('http://localhost:3000/saveAttendance', jsonData).success(function(data) {
+        $http.post('https://hrattendance.herokuapp.com/saveAttendance', jsonData).success(function(data) {
             console.log("data save successfully");
             toastr.success('Data saved successfully');
             $rootScope.retriveMonthAttendance($rootScope.user);
         });
 
-    }
+    };
 
     /**
      * retrive the attendance of the day
@@ -157,7 +157,7 @@ HrApp.controller('TimepickerCtrl', function($scope, $log, $rootScope, $http, $lo
             'EnggId': $scope.id,
             'date': $scope.currentDate
         };
-        $http.post('http://localhost:3000/retriveDayAttendance', $rootScope.user).success(function(data) {
+        $http.post('https://hrattendance.herokuapp.com/retriveDayAttendance', $rootScope.user).success(function(data) {
             console.log(data.attendance);
             if (data.attendance) {
                 $scope.inTime = data.attendance.inTime;
